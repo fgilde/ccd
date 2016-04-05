@@ -3,3 +3,6 @@
 ################################################################################
 
 /CCD_LocCount/CCD_LocCount/bin/Debug
+/CCD_LocCount/CCD_LocCount/obj/Debug
+/CCD_LocCount/CCD_LocCountTest/obj/Debug
+/CCD_LocCount/CCD_LocCountTest/bin/Debug
