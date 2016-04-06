@@ -28,7 +28,7 @@ namespace CCD_LocCountTest
             var source = "//Anton\nHallo\n/*Muh\nKuh\n*/";
 
             var expected = "\r\n\nHallo\n\r\n";
-            var löscheAlleKommentare = LocCounter.LöscheAlleKommentare(source);
+            var löscheAlleKommentare = LocCounter.DeleteAllComments(source);
             Assert.AreEqual(expected, löscheAlleKommentare);
         }
 

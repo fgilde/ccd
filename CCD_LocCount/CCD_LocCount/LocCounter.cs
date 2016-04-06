@@ -8,7 +8,7 @@ namespace CCD_LocCount
     {
         public static int LOC(string sourceCode)
         {
-            var sourceOnly = LöscheAlleKommentare(sourceCode);
+            var sourceOnly = DeleteAllComments(sourceCode);
             var lines = ZerlegeInZeilen(sourceOnly);
             var trimmedLines = LöscheAlleLeerzeilen(lines);
 
@@ -25,7 +25,7 @@ namespace CCD_LocCount
             return sourceOnly.Split('\n');
         }
 
-        public static string LöscheAlleKommentare(string sourceCode)
+        public static string DeleteAllComments(string sourceCode)
         {
             var pattern = @"(@(?:""[^""]*"")+|""(?:[^""\r\n\\]+|\\.)*""|'(?:[^'\r\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
             return Regex.Replace(sourceCode, pattern, Environment.NewLine);
