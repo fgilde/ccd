@@ -24,12 +24,14 @@ namespace CCD_LocCountTest
         public void AcceptanceTestLocCount()
         {
             var folder = @"D:\!tmp\CCDLocCountTestDir";
-            var result = new List<string>();
 
-            LocCounter.LocCount(folder, result.Add);
-
-            Assert.Fail(); // TODO: Testen
         }
+
+
+
+
+
+
 
         [TestMethod]
         public void AcceptanceTestLOC()

@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="LocCountTest.cs" />
     <Compile Include="LocTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="TestData\SubFolder\TestFile2.cs">
@@ -74,7 +75,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="TestData\FileToIgnore.log">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

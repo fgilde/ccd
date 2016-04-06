@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -9,18 +8,12 @@ namespace CCD_LocCount
     {
         public static void LocCountLinq(string path, Action<string> foundFileAction)
         {
-            var found = Directory.EnumerateFiles(path, "*", SearchOption.AllDirectories)
-                .Select(fp => new FileInfo(fp))
-                .Where(fi => fi.Extension == ".cs")
-                .Select(fi => $"{fi.Name};{LOC(File.ReadAllText(fi.FullName))};{File.ReadAllLines(fi.FullName).Length}");
-
-            foreach (var f in found)
-                foundFileAction(f);
+            // TODO: Impl
         }
 
         public static void LocCount(string path, Action<string> foundFileAction)
         {
-            
+            // TODO: Impl
         }
 
         public static int LOC(string sourceCode)
