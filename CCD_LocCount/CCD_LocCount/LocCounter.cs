@@ -6,16 +6,6 @@ namespace CCD_LocCount
 {
     public static class LocCounter
     {
-        public static void LocCountLinq(string path, Action<string> foundFileAction)
-        {
-            // TODO: Impl
-        }
-
-        public static void LocCount(string path, Action<string> foundFileAction)
-        {
-            // TODO: Impl
-        }
-
         public static int LOC(string sourceCode)
         {
             var sourceWithOutComments = DeleteComments(sourceCode);
