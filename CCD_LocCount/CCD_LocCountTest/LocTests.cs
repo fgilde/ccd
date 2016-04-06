@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using CCD_LocCount;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,7 +12,7 @@ namespace CCD_LocCountTest
         [TestMethod]
         public void AcceptanceTestLocCountLinq()
         {
-            var folder = @"D:\!tmp\CCDLocCountTestDir";
+            var folder = Path.Combine(Environment.CurrentDirectory, "TestData");
             var result = new List<string>();
 
             LocCounter.LocCountLinq(folder, result.Add);
