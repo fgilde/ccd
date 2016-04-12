@@ -63,12 +63,12 @@ namespace CSVTabelliererTest
         }
 
         [TestMethod]
-        public void NormiereTabelleTest()
+        public void NormiereTabelleMitSpaltenTrennerTest()
         {
             var tabelle = new[] { new[] { "123", "ABCD", "01A" }, new[] { "ABC", "HALLO", "1" } };
             var spaltenLaenge = new[] { 3, 5, 3 };
-            var normierteTabelle = CSVTabellierer.CSVTabellierer.NormiereTabelle(tabelle, spaltenLaenge);
-            var erwartet = new[] { new[] { "123", "ABCD ", "01A" }, new[] { "ABC", "HALLO", "1  " } };
+            var normierteTabelle = CSVTabellierer.CSVTabellierer.NormiereTabelleMitSpaltenTrenner(tabelle, spaltenLaenge);
+            var erwartet = new[] { new[] { "123|", "ABCD |", "01A|" }, new[] { "ABC|", "HALLO|", "1  |" } };
             CollectionAssert.AreEqual(erwartet.First(), normierteTabelle.First());
             CollectionAssert.AreEqual(erwartet.Last(), normierteTabelle.Last());
         }
