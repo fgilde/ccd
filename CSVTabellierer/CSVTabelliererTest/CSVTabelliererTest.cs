@@ -43,5 +43,14 @@ namespace CSVTabelliererTest
             var erwartet = new[] { 3, 5, 3 };
             CollectionAssert.AreEqual(erwartet, CSVTabellierer.CSVTabellierer.ErmittleMaxSpaltenLänge(tabelle, 3));
         }
+
+
+        [TestMethod]
+        public void ErmittleAnzahlSpaltenTest()
+        {
+            var tabelle = new[] { new[] { "123", "ABCD", "01A" }, new[] { "ABC", "HALLO", "1" } };
+
+            Assert.AreEqual(3, CSVTabellierer.CSVTabellierer.ErmittleAnzahlSpalten(tabelle));
+        }
     }
 }

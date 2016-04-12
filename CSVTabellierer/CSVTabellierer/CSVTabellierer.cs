@@ -39,7 +39,9 @@ namespace CSVTabellierer
 
         public static int ErmittleAnzahlSpalten(IEnumerable<string[]> tabelle)
         {
-            throw new NotImplementedException();
+            if (tabelle.Any())
+                return tabelle.First().Length;
+            return 0;
         }
 
         public static IEnumerable<string[]> ZerlegeInSpalten(IEnumerable<string> csvZeilen)
