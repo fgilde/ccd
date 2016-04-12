@@ -15,12 +15,29 @@ namespace CSVTabellierer
             return GeneriereOutput(tabelle, maxSpaltenlängen);
         }
 
-        private static IEnumerable<string> GeneriereOutput(IEnumerable<string[]> tabelle, int[] maxSpaltenlänge)
+        public static IEnumerable<string> GeneriereOutput(IEnumerable<string[]> tabelle, int[] maxSpaltenlänge)
         {
             throw new NotImplementedException();
         }
 
-        private static int[] MaxSpaltenlängen(IEnumerable<string[]> tabelle)
+        public static int[] MaxSpaltenlängen(IEnumerable<string[]> tabelle)
+        {
+            var anzahlSpalten = ErmittleAnzahlSpalten(tabelle);
+            return ErmittleMaxSpaltenLänge(tabelle, anzahlSpalten);
+        }
+
+        public static int[] ErmittleMaxSpaltenLänge(IEnumerable<string[]> tabelle, int anzahlSpalten)
+        {
+            var maxSpaltenLängen = new int[anzahlSpalten];
+            foreach (var zeile in tabelle)
+            {
+                for (var i = 0; i < anzahlSpalten; i++)
+                    maxSpaltenLängen[i] = Math.Max(zeile[i].Length, maxSpaltenLängen[i]);
+            }
+            return maxSpaltenLängen;
+        }
+
+        public static int ErmittleAnzahlSpalten(IEnumerable<string[]> tabelle)
         {
             throw new NotImplementedException();
         }

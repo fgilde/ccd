@@ -27,5 +27,21 @@ namespace CSVTabelliererTest
             CollectionAssert.AreEqual(new[] { "123","ABCD","01A"}, zerlegeInSpalten.First());
             CollectionAssert.AreEqual(new[] { "ABC", "HALLO", "1" }, zerlegeInSpalten.Last());
         }
+
+        [TestMethod]
+        public void MaxSpaltenlängenTest()
+        {
+            var tabelle = new[] {new[] {"123", "ABCD", "01A"}, new[] {"ABC", "HALLO", "1"}};
+            var erwartet = new[] {3, 5, 3};
+            CollectionAssert.AreEqual(erwartet, CSVTabellierer.CSVTabellierer.MaxSpaltenlängen(tabelle));
+        }
+
+        [TestMethod]
+        public void ErmittleMaxSpaltenLängeTest()
+        {
+            var tabelle = new[] { new[] { "123", "ABCD", "01A" }, new[] { "ABC", "HALLO", "1" } };
+            var erwartet = new[] { 3, 5, 3 };
+            CollectionAssert.AreEqual(erwartet, CSVTabellierer.CSVTabellierer.ErmittleMaxSpaltenLänge(tabelle, 3));
+        }
     }
 }
