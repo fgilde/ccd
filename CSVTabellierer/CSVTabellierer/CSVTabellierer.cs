@@ -8,5 +8,9 @@ namespace CSVTabellierer
 {
     public class CSVTabellierer
     {
+        public static IEnumerable<string> Tabelliere(IEnumerable<string> CSV_zeilen)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
