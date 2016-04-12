@@ -17,7 +17,30 @@ namespace CSVTabellierer
 
         public static IEnumerable<string> GeneriereOutput(IEnumerable<string[]> tabelle, int[] maxSpaltenlänge)
         {
+            var normierteTabelle = NormiereTabelle(tabelle, maxSpaltenlänge);
+            var zeilen = KonvertiereZuZeilen(normierteTabelle);
+            string headTrenner = GeneriereHeadTrenner(maxSpaltenlänge);
+            return FügeHeadTrennerEin(zeilen, headTrenner);
+        }
+
+        public static IEnumerable<string> FügeHeadTrennerEin(IEnumerable<string> zeilen, string headTrenner)
+        {
             throw new NotImplementedException();
+        }
+
+        public static string GeneriereHeadTrenner(int[] maxSpaltenlänge)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static IEnumerable<string> KonvertiereZuZeilen(IEnumerable<string[]> normierteTabelle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static IEnumerable<string[]> NormiereTabelle(IEnumerable<string[]> tabelle, int[] maxSpaltenlänge)
+        {
+            return tabelle.Select(z => z.Select((s, i) => s.PadRight(maxSpaltenlänge[i])).ToArray());
         }
 
         public static int[] MaxSpaltenlängen(IEnumerable<string[]> tabelle)

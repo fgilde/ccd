@@ -52,5 +52,27 @@ namespace CSVTabelliererTest
 
             Assert.AreEqual(3, CSVTabellierer.CSVTabellierer.ErmittleAnzahlSpalten(tabelle));
         }
+
+        [TestMethod]
+        public void GeneriereOutputTest()
+        {
+            var tabelle = new[] { new[] { "123", "ABCD", "01A" }, new[] { "ABC", "HALLO", "1" } };
+            var spaltenLaenge = new[] { 3, 5, 3 };
+            var erwartet = new[] { "123|ABCD |01A|", "---+-----+---+", "ABC|HALLO|1  |" };
+            CollectionAssert.AreEqual(erwartet, CSVTabellierer.CSVTabellierer.GeneriereOutput(tabelle, spaltenLaenge).ToArray());
+        }
+
+        [TestMethod]
+        public void NormiereTabelleTest()
+        {
+            var tabelle = new[] { new[] { "123", "ABCD", "01A" }, new[] { "ABC", "HALLO", "1" } };
+            var spaltenLaenge = new[] { 3, 5, 3 };
+            var normierteTabelle = CSVTabellierer.CSVTabellierer.NormiereTabelle(tabelle, spaltenLaenge);
+            var erwartet = new[] { new[] { "123", "ABCD ", "01A" }, new[] { "ABC", "HALLO", "1  " } };
+            CollectionAssert.AreEqual(erwartet.First(), normierteTabelle.First());
+            CollectionAssert.AreEqual(erwartet.Last(), normierteTabelle.Last());
+        }
+
+
     }
 }
