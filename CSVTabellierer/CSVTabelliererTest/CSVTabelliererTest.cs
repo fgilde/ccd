@@ -29,6 +29,12 @@ namespace CSVTabelliererTest
         }
 
         [TestMethod]
+        public void KonvertiereZuZeilenTest()
+        {
+            IEnumerable<string> result = CSVTabellierer.CSVTabellierer.KonvertiereZuZeilen(new[] {new[] {"a", "b", "c"}, new[] {"x", "y", "z"}});
+            CollectionAssert.AreEqual(new [] {"abc", "xyz"}, result.ToArray());
+        }
+        [TestMethod]
         public void MaxSpaltenlängenTest()
         {
             var tabelle = new[] {new[] {"123", "ABCD", "01A"}, new[] {"ABC", "HALLO", "1"}};

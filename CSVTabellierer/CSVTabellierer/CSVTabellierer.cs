@@ -33,9 +33,9 @@ namespace CSVTabellierer
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> KonvertiereZuZeilen(IEnumerable<string[]> normierteTabelle)
+        public static IEnumerable<string> KonvertiereZuZeilen(IEnumerable<string[]> tabelle)
         {
-            throw new NotImplementedException();
+            return tabelle.Select(strings => strings.Aggregate((s, s1) => s + s1));
         }
 
         public static IEnumerable<string[]> NormiereTabelleMitSpaltenTrenner(IEnumerable<string[]> tabelle, int[] maxSpaltenlänge)
