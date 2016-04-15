@@ -28,9 +28,9 @@ namespace CSVTabellierer
             throw new NotImplementedException();
         }
 
-        public static string GeneriereHeadTrenner(int[] maxSpaltenlänge)
+        public static string GeneriereHeadTrenner(int[] spaltenlängen)
         {
-            throw new NotImplementedException();
+            return spaltenlängen.Select(c => (new String('-', c) + '+')).Aggregate((s, s1) => s + s1);
         }
 
         public static IEnumerable<string> KonvertiereZuZeilen(IEnumerable<string[]> tabelle)

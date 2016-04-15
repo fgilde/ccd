@@ -34,6 +34,13 @@ namespace CSVTabelliererTest
             IEnumerable<string> result = CSVTabellierer.CSVTabellierer.KonvertiereZuZeilen(new[] {new[] {"a", "b", "c"}, new[] {"x", "y", "z"}});
             CollectionAssert.AreEqual(new [] {"abc", "xyz"}, result.ToArray());
         }
+
+        [TestMethod]
+        public void GeneriereHeadTrennerTest()
+        {
+            var headZeile = CSVTabellierer.CSVTabellierer.GeneriereHeadTrenner(new int[] {2, 3, 4});
+            Assert.AreEqual("--+---+----+",headZeile);
+        }
         [TestMethod]
         public void MaxSpaltenlängenTest()
         {
