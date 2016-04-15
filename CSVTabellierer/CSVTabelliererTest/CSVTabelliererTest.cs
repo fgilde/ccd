@@ -16,6 +16,13 @@ namespace CSVTabelliererTest
             CollectionAssert.AreEqual(erwartet, CSVTabellierer.CSVTabellierer.Tabelliere(zeilen).ToArray());
         }
 
+        // Internal Customer sagt: Leere Tabelle ist gültig
+        [TestMethod]
+        public void AcceptanceTestLeer()
+        {
+            CollectionAssert.AreEqual(new string[] { }, CSVTabellierer.CSVTabellierer.Tabelliere(Enumerable.Empty<string>()).ToArray());
+        }
+
         [TestMethod]
         public void TestZerlegeInSpalten()
         {
@@ -41,6 +48,13 @@ namespace CSVTabelliererTest
             var headZeile = CSVTabellierer.CSVTabellierer.GeneriereHeadTrenner(new int[] {2, 3, 4});
             Assert.AreEqual("--+---+----+",headZeile);
         }
+
+        [TestMethod]
+        public void FuegeHeadTrennerEinTest()
+        {
+            CollectionAssert.AreEqual(new [] {"Muh", "sagt", "Buh"}, CSVTabellierer.CSVTabellierer.FügeHeadTrennerEin(new[] {"Muh", "Buh"}, "sagt").ToArray());
+        }
+
         [TestMethod]
         public void MaxSpaltenlängenTest()
         {

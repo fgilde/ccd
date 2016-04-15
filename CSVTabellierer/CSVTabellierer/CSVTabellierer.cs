@@ -25,12 +25,16 @@ namespace CSVTabellierer
 
         public static IEnumerable<string> FügeHeadTrennerEin(IEnumerable<string> zeilen, string headTrenner)
         {
-            throw new NotImplementedException();
+            var tabelleMitTrenner = zeilen.ToList();
+            if (tabelleMitTrenner.Any())
+                tabelleMitTrenner.Insert(1, headTrenner);
+            return tabelleMitTrenner;
         }
 
         public static string GeneriereHeadTrenner(int[] spaltenlängen)
         {
-            return spaltenlängen.Select(c => (new String('-', c) + '+')).Aggregate((s, s1) => s + s1);
+            var part1 = spaltenlängen.Select(c => (new string('-', c) + '+')).ToList();
+            return part1.Any() ? part1.Aggregate((s, s1) => s + s1) : string.Empty;
         }
 
         public static IEnumerable<string> KonvertiereZuZeilen(IEnumerable<string[]> tabelle)
