@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace BankOCR
 {
-    class BankOCRTool
+    public class BankOCRTool
     {
         static void Main(string[] args)
         {
+            string[] ausgabe = RecognizeDigitsInFile(args[0]);
+        }
+
+        public static string[] RecognizeDigitsInFile(string filePath)
+        {
+            throw new NotImplementedException();
         }
     }
 }
