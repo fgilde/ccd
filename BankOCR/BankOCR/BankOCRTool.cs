@@ -53,9 +53,19 @@ namespace BankOCR
             return string.Join(string.Empty, flatStrings.Select(fs => Array.IndexOf(mappingTable, fs)));
         }
 
-        private static string[] FlattenOCRDigits(string[] digits)
+        public static string[] FlattenOCRDigits(string[] digits)
         {
-            throw new NotImplementedException();
+            var list = new List<string>();
+
+            for (int i = 0; i < digits[0].Length; i+=4)
+            {
+                var substring = digits[0].Substring(i, 3);
+                var substring1 = digits[1].Substring(i, 3);
+                var substring2 = digits[2].Substring(i, 3);
+                list.Add(substring+substring1+substring2);
+            }
+            //digits.SelectMany(s,i => )
+            return list.ToArray();
         }
 
         public static string[][] SplitIntoPackets(string[] rows)

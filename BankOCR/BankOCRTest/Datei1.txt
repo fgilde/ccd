@@ -1,8 +1,7 @@
 ﻿        
-   I I_I
-   I   I
+  I I_I
+  I   I
 
  _ 
 I I
-I_I
- 
+I_I 
