@@ -30,14 +30,10 @@ namespace BankOCR
 
         public static IEnumerable<string> ParsePackets(string[][] packets)
         {
-            foreach (var packet in packets)
-            {
-                var flatStrings = FlattenOCRDigits(packet);
-                yield return MapToRow(flatStrings);
-            }
+            return packets.Select(FlattenOCRDigits).Select(MapToRow);
         }
 
-        public static string MapToRow(string[] flatStrings)
+        public static string MapToRow(IEnumerable<string> flatStrings)
         {
             var mappingTable = new[] {
                 " _ I II_I" /*0*/,
@@ -53,19 +49,10 @@ namespace BankOCR
             return string.Join(string.Empty, flatStrings.Select(fs => Array.IndexOf(mappingTable, fs)));
         }
 
-        public static string[] FlattenOCRDigits(string[] digits)
+        public static IEnumerable<string> FlattenOCRDigits(string[] digits)
         {
-            var list = new List<string>();
-
-            for (int i = 0; i < digits[0].Length; i+=4)
-            {
-                var substring = digits[0].Substring(i, 3);
-                var substring1 = digits[1].Substring(i, 3);
-                var substring2 = digits[2].Substring(i, 3);
-                list.Add(substring+substring1+substring2);
-            }
-            //digits.SelectMany(s,i => )
-            return list.ToArray();
+            for (int i = 0; i < digits[0].Length; i += 4)
+                yield return digits[0].Substring(i, 3) + digits[1].Substring(i, 3) + digits[2].Substring(i, 3);
         }
 
         public static string[][] SplitIntoPackets(string[] rows)

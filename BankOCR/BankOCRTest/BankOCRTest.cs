@@ -39,7 +39,7 @@ namespace BankOCRTest
                 "I_I   I   I I_ " };
 
             var expected = new string[] { " _ I II_I" /*0*/, "     I  I" /*1*/, " _   I  I" /*7*/, " _  _II_ " /*2*/};
-            CollectionAssert.AreEqual(expected,BankOCRTool.FlattenOCRDigits(source));
+            CollectionAssert.AreEqual(expected,BankOCRTool.FlattenOCRDigits(source).ToArray());
         }
 
         [TestMethod]
