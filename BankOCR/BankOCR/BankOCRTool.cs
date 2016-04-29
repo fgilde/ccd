@@ -30,8 +30,12 @@ namespace BankOCR
 
         public static string[] ParsePackets(string[][] packets)
         {
-            var mappingTable = new[,] {{" _ ", "I I", "I_I"}, {"   ", "  I", "  I"}};
-            
+            var mappingTable = new[] {" _ I II_I" /*0*/, "     I  I"/*1*/};
+
+            // Laufe über alle Packets
+            //   Ermittle Zifferstrings => string[]
+            //   Ermittle Zeile => string
+
             throw new NotImplementedException();
         }
 
