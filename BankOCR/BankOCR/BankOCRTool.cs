@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankOCR
 {
@@ -11,7 +9,8 @@ namespace BankOCR
     {
         static void Main(string[] args)
         {
-            string[] ausgabe = RecognizeDigitsInFile(args[0]);
+            foreach(string line in RecognizeDigitsInFile(args[0]))
+                Console.WriteLine(line);
         }
 
         public static string[] RecognizeDigitsInFile(string filePath)
