@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using BankOCR;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -19,7 +20,14 @@ namespace BankOCRTest
         public void ParsePacketsTest()
         {
             var input = new string[][] { new [] {"   ","  I","  I"} };
-            CollectionAssert.AreEqual(new [] {"1"}, BankOCRTool.ParsePackets(input));
+            CollectionAssert.AreEqual(new [] {"1"}, BankOCRTool.ParsePackets(input).ToArray());
+        }
+
+        [TestMethod]
+        public void MapToRowTest()
+        {
+            var source = new string[] {" _ I II_I" /*0*/, "     I  I" /*1*/, " _   I  I" /*7*/, " _  _II_ " /*2*/};
+            Assert.AreEqual("0172", BankOCRTool.MapToRow(source));
         }
 
         [TestMethod]

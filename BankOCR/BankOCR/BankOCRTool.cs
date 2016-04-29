@@ -23,19 +23,38 @@ namespace BankOCR
             var packets = SplitIntoPackets(rows);
 
             // Diese Pakete Parsen 
-            string[] result = ParsePackets(packets);
+            var result = ParsePackets(packets);
 
-            return result;
+            return result.ToArray();
         }
 
-        public static string[] ParsePackets(string[][] packets)
+        public static IEnumerable<string> ParsePackets(string[][] packets)
         {
-            var mappingTable = new[] {" _ I II_I" /*0*/, "     I  I"/*1*/};
+            foreach (var packet in packets)
+            {
+                var flatStrings = FlattenOCRDigits(packet);
+                yield return MapToRow(flatStrings);
+            }
+        }
 
-            // Laufe über alle Packets
-            //   Ermittle Zifferstrings => string[]
-            //   Ermittle Zeile => string
+        public static string MapToRow(string[] flatStrings)
+        {
+            var mappingTable = new[] {
+                " _ I II_I" /*0*/,
+                "     I  I" /*1*/,
+                " _  _II_ " /*2*/,
+                " _  _I _I" /*3*/,
+                "   I_I  I" /*4*/,
+                " _ I_  _I" /*5*/,
+                " _ I_ I_I" /*6*/,
+                " _   I  I" /*7*/,
+                " _ I_II_I" /*8*/,
+                " _ I_I _I" /*9*/};
+            return string.Join(string.Empty, flatStrings.Select(fs => Array.IndexOf(mappingTable, fs)));
+        }
 
+        private static string[] FlattenOCRDigits(string[] digits)
+        {
             throw new NotImplementedException();
         }
 
