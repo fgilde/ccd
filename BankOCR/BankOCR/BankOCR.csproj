@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankOCRTool.cs" />
+    <Compile Include="CLI.cs" />
+    <Compile Include="ConsoleOutput.cs" />
+    <Compile Include="FileReader.cs" />
+    <Compile Include="OCR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
