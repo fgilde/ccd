@@ -2,7 +2,7 @@
 
 namespace DublettenFinder
 {
-    interface IDublettenprüfung
+    public interface IDublettenprüfung
     {
         IEnumerable<IDublette> Sammle_Kandidaten(string pfad);
         IEnumerable<IDublette> Sammle_Kandidaten(string pfad, Vergleichsmodi modus);
@@ -10,7 +10,7 @@ namespace DublettenFinder
         IEnumerable<IDublette> Prüfe_Kandidaten(IEnumerable<IDublette> kandidaten);
     }
 
-    interface IDublette
+    public interface IDublette
     {
         IEnumerable<string> Dateipfade { get; }
     }
