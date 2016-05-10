@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DublettenFinder", "DublettenFinder\DublettenFinder.csproj", "{22A9A8AF-CAC2-4679-A001-DB0FF1E93405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DublettenFinderTestProject", "DublettenFinderTestProject\DublettenFinderTestProject.csproj", "{76497842-3C8B-41AB-B1A2-59C73629D15D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22A9A8AF-CAC2-4679-A001-DB0FF1E93405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A9A8AF-CAC2-4679-A001-DB0FF1E93405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A9A8AF-CAC2-4679-A001-DB0FF1E93405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A9A8AF-CAC2-4679-A001-DB0FF1E93405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76497842-3C8B-41AB-B1A2-59C73629D15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76497842-3C8B-41AB-B1A2-59C73629D15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76497842-3C8B-41AB-B1A2-59C73629D15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76497842-3C8B-41AB-B1A2-59C73629D15D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
