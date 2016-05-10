@@ -15,7 +15,7 @@ namespace DublettenFinder
         IEnumerable<string> Dateipfade { get; }
     }
 
-    enum Vergleichsmodi
+    public enum Vergleichsmodi
     {
         Größe_und_Name,
         Größe

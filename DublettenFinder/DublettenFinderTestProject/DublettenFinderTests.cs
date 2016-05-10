@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DublettenFinderTestProject
 {
     [TestClass]
-    public class UnitTest1
+    public class DublettenFinderTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AcceptanceTest()
         {
         }
     }
