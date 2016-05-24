@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contract.cs" />
+    <Compile Include="DateiSystem.cs" />
+    <Compile Include="Datei.cs" />
+    <Compile Include="Dublette.cs" />
     <Compile Include="DublettenPrüfung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

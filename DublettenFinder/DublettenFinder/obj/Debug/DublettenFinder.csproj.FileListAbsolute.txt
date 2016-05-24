@@ -1,0 +1,5 @@
+D:\dev\ccd\DublettenFinder\DublettenFinder\bin\Debug\DublettenFinder.dll
+D:\dev\ccd\DublettenFinder\DublettenFinder\bin\Debug\DublettenFinder.pdb
+D:\dev\ccd\DublettenFinder\DublettenFinder\obj\Debug\DublettenFinder.csprojResolveAssemblyReference.cache
+D:\dev\ccd\DublettenFinder\DublettenFinder\obj\Debug\DublettenFinder.dll
+D:\dev\ccd\DublettenFinder\DublettenFinder\obj\Debug\DublettenFinder.pdb
