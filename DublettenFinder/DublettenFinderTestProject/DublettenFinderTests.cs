@@ -29,7 +29,14 @@ namespace DublettenFinderTestProject
         public void AcceptanceTestSammle_KandidatenGröße()
         {
             var dublettenPrüfung = new DublettenPrüfung();
-            IEnumerable<IDublette> sammleKandidaten = dublettenPrüfung.Sammle_Kandidaten(path, Vergleichsmodi.Größe);
+            IEnumerable<IDublette> kandidaten = dublettenPrüfung.Sammle_Kandidaten(path, Vergleichsmodi.Größe);
+
+            Assert.AreEqual(1, kandidaten.Count());
+            var dublette = kandidaten.First();
+            Assert.AreEqual(3, dublette.Dateipfade.Count());
+            Assert.IsTrue(dublette.Dateipfade.Any(d => d.Contains("TestDir\\File1.txt")));
+            Assert.IsTrue(dublette.Dateipfade.Any(d => d.Contains("TestDir\\SubDir\\File1.txt")));
+            Assert.IsTrue(dublette.Dateipfade.Any(d => d.Contains("TestDir\\File1Nochmal.txt")));
         }
     }
 }
