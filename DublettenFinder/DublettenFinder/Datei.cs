@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DublettenFinder
 {
@@ -13,6 +15,9 @@ namespace DublettenFinder
 
         public string Name { get; set; }
         public string Pfad { get; set; } 
-        public long Size { get; set; } 
+        public long Size { get; set; }
+
+        public byte[] MD5Hash =>  MD5.Create("MD5").ComputeHash(DateiSystem.ReadAllBytes(this));
+        
     }
 }

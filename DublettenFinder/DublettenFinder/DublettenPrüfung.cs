@@ -41,6 +41,18 @@ namespace DublettenFinder
 
         public IEnumerable<IDublette> Prüfe_Kandidaten(IEnumerable<IDublette> kandidaten)
         {
+            IEnumerable<HashDublette> hashDubletten = BerechneHashDubletten(kandidaten);
+            IEnumerable<IDublette> ergebnis = GruppiereNachHash(hashDubletten);
+            return ergebnis.Where(e => e.Dateipfade.Count() > 1);
+        }
+
+        public IEnumerable<IDublette> GruppiereNachHash(IEnumerable<HashDublette> hashDubletten)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<HashDublette> BerechneHashDubletten(IEnumerable<IDublette> kandidaten)
+        {
             throw new System.NotImplementedException();
         }
     }
