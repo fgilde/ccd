@@ -6,6 +6,11 @@ namespace DublettenFinder
 {
     public class Datei 
     {
+        public Datei(string pfad) : this(new FileInfo(pfad))
+        {
+            
+        }
+
         public Datei(FileInfo fi)
         {
             Name = fi.Name;

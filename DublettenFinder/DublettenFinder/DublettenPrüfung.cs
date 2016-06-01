@@ -15,53 +15,37 @@ namespace DublettenFinder
             IEnumerable<Datei> datein = DateiSystem.SammleDatein(pfad);
             var kanidaten = GruppierungNachGröße(datein);
             kanidaten = GruppierungNachName(kanidaten, modus);
-            
-            return kanidaten.Where(k => k.Count > 1).Select(k => new Dublette
-            {
-                Dateipfade = new List<string>(k.Select(d => d.Pfad))
-            });
+            return kanidaten.Where(dublette => dublette.Dateipfade.Count() > 1);
         }
 
-        private List<List<Datei>> GruppierungNachName(List<List<Datei>> kanidaten, Vergleichsmodi modus)
-        {
-            List<List<Datei>> result = kanidaten.ToList();
-            if (modus == Vergleichsmodi.Größe_und_Name)
-            {
-                result = new List<List<Datei>>();
-                foreach (List<Datei> grouping in kanidaten)
-                    result.AddRange(grouping.GroupBy(k => k.Name).Select(g => g.ToList()));
-            }
-           return result;
-        }
-
-        private List<List<Datei>> GruppierungNachGröße(IEnumerable<Datei> datein)
-        {
-             return datein.GroupBy(d => d.Size).Select(g => new List<Datei>(g)).ToList();
-        }
 
         public IEnumerable<IDublette> Prüfe_Kandidaten(IEnumerable<IDublette> kandidaten)
         {
-            IEnumerable<HashDublette> hashDubletten = BerechneHashDubletten(kandidaten);
+            IEnumerable<Dublette> hashDubletten = ErzeugeDublettenMitHash(kandidaten);
             IEnumerable<IDublette> ergebnis = GruppiereNachHash(hashDubletten);
             return ergebnis.Where(e => e.Dateipfade.Count() > 1);
         }
 
-        public IEnumerable<IDublette> GruppiereNachHash(IEnumerable<HashDublette> hashDubletten)
+        private IEnumerable<Dublette> GruppierungNachName(IEnumerable<Dublette> kanidaten, Vergleichsmodi modus)
         {
-            var result = new List<IDublette>();
-            foreach (var hashDublette in hashDubletten)
-            {
-                var groupBy = hashDublette.Dateien.GroupBy(d => d.MD5Hash);
-                var collection = groupBy.Select(g => new Dublette {Dateipfade = g.Select(d => d.Pfad)});
-                result.AddRange(collection);
-            }
-
-            return result;
+            return modus == Vergleichsmodi.Größe_und_Name ? 
+                kanidaten.SelectMany(dublette => dublette.Dateien.GroupBy(d => d.Name).Select(g => new Dublette { Dateien = g })) 
+                : kanidaten;
         }
 
-        public IEnumerable<HashDublette> BerechneHashDubletten(IEnumerable<IDublette> kandidaten)
+        private IEnumerable<Dublette> GruppierungNachGröße(IEnumerable<Datei> datein)
         {
-            return kandidaten.Select(dublette => new HashDublette(dublette));
+             return datein.GroupBy(d => d.Size).Select(g => new Dublette(g));
+        }
+
+        private IEnumerable<IDublette> GruppiereNachHash(IEnumerable<Dublette> dubletten)
+        {
+            return dubletten.SelectMany(dublette => dublette.Dateien.GroupBy(d => d.MD5Hash).Select(g => new Dublette { Dateien = g }));
+        }
+
+        private IEnumerable<Dublette> ErzeugeDublettenMitHash(IEnumerable<IDublette> kandidaten)
+        {
+            return kandidaten.Select(dublette => new Dublette(dublette));
         }
     }
 }

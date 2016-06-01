@@ -12,3 +12,17 @@ D:\dev\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\Microsoft.Visual
 D:\dev\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.csprojResolveAssemblyReference.cache
 D:\dev\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.dll
 D:\dev\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.pdb
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\TestDir\File1Nochmal.txt
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\TestDir\File2.txt
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\TestDir\File1.txt
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\TestDir\SubDir\File3.txt
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\TestDir\SubDir\File1.txt
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\DublettenFinderTestProject.dll
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\DublettenFinderTestProject.pdb
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\DublettenFinder.dll
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\DublettenFinder.pdb
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.csprojResolveAssemblyReference.cache
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.dll
+D:\dev\github\ccd\DublettenFinder\DublettenFinderTestProject\obj\Debug\DublettenFinderTestProject.pdb
