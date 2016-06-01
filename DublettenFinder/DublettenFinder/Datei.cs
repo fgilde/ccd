@@ -17,7 +17,7 @@ namespace DublettenFinder
         public string Pfad { get; set; } 
         public long Size { get; set; }
 
-        public byte[] MD5Hash =>  MD5.Create("MD5").ComputeHash(DateiSystem.ReadAllBytes(this));
+        public string MD5Hash =>  Encoding.Default.GetString(MD5.Create().ComputeHash(DateiSystem.ReadAllBytes(this)));
         
     }
 }

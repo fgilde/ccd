@@ -48,7 +48,15 @@ namespace DublettenFinder
 
         public IEnumerable<IDublette> GruppiereNachHash(IEnumerable<HashDublette> hashDubletten)
         {
-            throw new System.NotImplementedException();
+            var result = new List<IDublette>();
+            foreach (var hashDublette in hashDubletten)
+            {
+                var groupBy = hashDublette.Dateien.GroupBy(d => d.MD5Hash);
+                var collection = groupBy.Select(g => new Dublette {Dateipfade = g.Select(d => d.Pfad)});
+                result.AddRange(collection);
+            }
+
+            return result;
         }
 
         public IEnumerable<HashDublette> BerechneHashDubletten(IEnumerable<IDublette> kandidaten)
