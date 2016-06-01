@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -17,6 +18,11 @@ namespace DublettenFinder
         public HashDublette()
         {
             Dateien = new List<Datei>();
+        }
+
+        public HashDublette(IDublette dublette )
+        {
+            Dateien = new List<Datei>(dublette.Dateipfade.Select(s => new Datei(new FileInfo(s))));
         }
 
         public IEnumerable<Datei> Dateien { get; set; }

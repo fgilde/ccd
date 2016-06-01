@@ -61,7 +61,7 @@ namespace DublettenFinder
 
         public IEnumerable<HashDublette> BerechneHashDubletten(IEnumerable<IDublette> kandidaten)
         {
-            throw new System.NotImplementedException();
+            return kandidaten.Select(dublette => new HashDublette(dublette));
         }
     }
 }
