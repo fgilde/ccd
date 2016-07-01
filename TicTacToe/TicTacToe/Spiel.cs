@@ -4,15 +4,37 @@ namespace TicTacToe
 {
     public class Spiel
     {
+        private char[] spielfeld;
+        private char spieler;
+
 
         public SpielStand Neu()
         {
-            return new SpielStand {Meldung = "Neu", Spielfeld = new [] {' ', ' ', ' ', ' ' , ' ' , ' ' , ' ' , ' ' , ' ' } };
+            spielfeld = new[] {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+            spieler = 'X';
+            return new SpielStand {Meldung = "Neu", Spielfeld = spielfeld };
         }
 
         public SpielStand Ziehen(int koordinate)
         {
-            return new SpielStand {Meldung = $"Koordinate:{koordinate}", Spielfeld = new[] { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
+            ZelleBelegen(koordinate);
+            SpielerWechsel();
+            return SpielstandBerechnen();
+        }
+
+        private SpielStand SpielstandBerechnen()
+        {
+            return new SpielStand {Spielfeld = spielfeld};
+        }
+
+        private void SpielerWechsel()
+        {
+            spieler = spieler == 'X' ? 'O' : 'X';
+        }
+
+        private void ZelleBelegen(int koordinate)
+        {
+            spielfeld[koordinate] = spieler;
         }
     }
 }
