@@ -29,6 +29,7 @@ namespace TicTacToeForms
             for (int i = 0; i < spielStand.Spielfeld.Length; i++)
                 buttons[i].Text = spielStand.Spielfeld[i].ToString();
             labelMeldung.Text = spielStand.Meldung;
+            buttons.ToList().ForEach(button => button.Enabled = !spielStand.SpielVorbei);
         }
 
         private void OnZelleKlick(object sender, EventArgs e)

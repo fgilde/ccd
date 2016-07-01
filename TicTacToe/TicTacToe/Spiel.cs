@@ -20,21 +20,23 @@ namespace TicTacToe
         public SpielStand Ziehen(int koordinate)
         {
             var meldung = "";
+            var spielVorbei = false;
             SpielZugPrüfen(koordinate,
                 () =>
                 {
                     ZelleBelegen(koordinate);
                     SpielendePrüfen(
-                        (s) => meldung = s,
-                        () =>
+                        s =>
                         {
-                            SpielerWechsel();
-                        });
+                            meldung = s;
+                            spielVorbei = true;
+                        },
+                        SpielerWechsel);
                 
                 },
                 s => meldung = s );
             
-            return SpielstandBerechnen(meldung);
+            return SpielstandBerechnen(meldung, spielVorbei);
         }
 
         private void SpielendePrüfen(Action<string> endeErkannt, Action weiter)
@@ -88,9 +90,9 @@ namespace TicTacToe
                 ungueltigerZug("Zelle bereits belegt");
         }
 
-        private SpielStand SpielstandBerechnen(string meldung = "")
+        private SpielStand SpielstandBerechnen(string meldung = "", bool spielVorbei = false)
         {
-            return new SpielStand {Meldung = meldung, Spielfeld = spielfeld};
+            return new SpielStand {Meldung = meldung, Spielfeld = spielfeld, SpielVorbei = spielVorbei };
         }
 
         private void SpielerWechsel()
