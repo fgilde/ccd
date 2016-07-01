@@ -1,28 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DublettenFinder
 {
+
     public class Dublette : IDublette
     {
-        public IEnumerable<string> Dateipfade { get; set; }
-    }
+        public Dublette()
+        {}
 
-    public class HashDublette : IDublette
-    {
-        public HashDublette()
+        /// <summary>Initialisiert eine neue Instanz der <see cref="T:System.Object" />-Klasse.</summary>
+        public Dublette(IEnumerable<Datei> dateien)
         {
-            Dateien = new List<Datei>();
+            Dateien = dateien;
         }
 
-        public HashDublette(IDublette dublette )
+        public Dublette(IDublette dublette )
         {
-            Dateien = new List<Datei>(dublette.Dateipfade.Select(s => new Datei(new FileInfo(s))));
+            Dateien = dublette.Dateipfade.Select(s => new Datei(s));
         }
 
         public IEnumerable<Datei> Dateien { get; set; }
