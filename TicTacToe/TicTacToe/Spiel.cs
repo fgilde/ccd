@@ -54,8 +54,28 @@ namespace TicTacToe
 
         private void GewonnenPrüfen(Action<string> endeErkannt, Action weiter)
         {
-            if (spielfeld[4] != ' ')
-                endeErkannt("Gewonnen");
+            SpielerHatGewonnen('X',
+                endeErkannt, 
+                () => SpielerHatGewonnen('O',
+                        endeErkannt, 
+                        weiter)
+             );
+        }
+
+        private void SpielerHatGewonnen(char spieler, Action<string> endeErkannt, Action weiter)
+        {
+            var gewinnerzuege = new [] {
+                new [] {0, 1, 2},
+                new[] { 3, 4, 5 } ,
+                new[] { 6, 7, 8 } ,
+                new[] { 0, 3, 6 } ,
+                new[] { 1, 4, 7 } ,
+                new[] { 2, 5, 8 } ,
+                new[] { 0, 4, 8 } ,
+                new[] { 2, 4, 6 } };
+
+            if (gewinnerzuege.Any(ints => ints.All(i => spielfeld[i] == spieler)))
+                endeErkannt($"{spieler} hat gewonnen");
             else
                 weiter();
         }
