@@ -7,12 +7,12 @@ namespace TicTacToe
 
         public SpielStand Neu()
         {
-            return new SpielStand {Meldung = "Neu"};
+            return new SpielStand {Meldung = "Neu", Spielfeld = new [] {' ', ' ', ' ', ' ' , ' ' , ' ' , ' ' , ' ' , ' ' } };
         }
 
         public SpielStand Ziehen(int koordinate)
         {
-            return new SpielStand {Meldung = $"Koordinate:{koordinate}"};
+            return new SpielStand {Meldung = $"Koordinate:{koordinate}", Spielfeld = new[] { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' } };
         }
     }
 }
