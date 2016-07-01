@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 
 namespace TicTacToe
 {
@@ -12,19 +13,34 @@ namespace TicTacToe
         {
             spielfeld = new[] {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
             spieler = 'X';
-            return new SpielStand {Meldung = "Neu", Spielfeld = spielfeld };
+            return SpielstandBerechnen();
         }
 
         public SpielStand Ziehen(int koordinate)
         {
-            ZelleBelegen(koordinate);
-            SpielerWechsel();
-            return SpielstandBerechnen();
+            var meldung = "";
+            SpielZugPrüfen(koordinate,
+                () =>
+                {
+                    ZelleBelegen(koordinate);
+                    SpielerWechsel();               
+                },
+                s => meldung = s );
+            
+            return SpielstandBerechnen(meldung);
         }
 
-        private SpielStand SpielstandBerechnen()
+        private void SpielZugPrüfen(int koordinate,Action gueltigerZug, Action<string> ungueltigerZug)
         {
-            return new SpielStand {Spielfeld = spielfeld};
+            if (spielfeld[koordinate] == ' ')
+                gueltigerZug();
+            else
+                ungueltigerZug("Zelle bereits belegt");
+        }
+
+        private SpielStand SpielstandBerechnen(string meldung = "")
+        {
+            return new SpielStand {Meldung = meldung, Spielfeld = spielfeld};
         }
 
         private void SpielerWechsel()
