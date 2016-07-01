@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.Eventing.Reader;
+using System.Linq;
 
 namespace TicTacToe
 {
@@ -23,11 +24,40 @@ namespace TicTacToe
                 () =>
                 {
                     ZelleBelegen(koordinate);
-                    SpielerWechsel();               
+                    SpielendePrüfen(
+                        (s) => meldung = s,
+                        () =>
+                        {
+                            SpielerWechsel();
+                        });
+                
                 },
                 s => meldung = s );
             
             return SpielstandBerechnen(meldung);
+        }
+
+        private void SpielendePrüfen(Action<string> endeErkannt, Action weiter)
+        {
+            GewonnenPrüfen(
+                endeErkannt,
+                () => UnentschiedenPrüfen( endeErkannt, weiter));
+
+        }
+
+        private void UnentschiedenPrüfen(Action <string> endeErkannt, Action weiter)
+        {
+            if (spielfeld.Any(c => c == ' '))
+                weiter();
+            else endeErkannt("Unentschieden");
+        }
+
+        private void GewonnenPrüfen(Action<string> endeErkannt, Action weiter)
+        {
+            if (spielfeld[4] != ' ')
+                endeErkannt("Gewonnen");
+            else
+                weiter();
         }
 
         private void SpielZugPrüfen(int koordinate,Action gueltigerZug, Action<string> ungueltigerZug)
