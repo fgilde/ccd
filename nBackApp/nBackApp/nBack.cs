@@ -1,8 +1,12 @@
 ﻿using System;
-using System.Timers;
 
 namespace nBackApp
 {
+    // Homework
+    // TODO: Profil-Dialog impl.
+    // TODO: Bei Ende eine Auswertung -> MessageBox (x-Fehler und dahinter Fehler Prozent) nichterkannte Wiederholung und falsch erkannte Wiederhohlung
+
+
     public class nBack
     {
         public Action<Spielzug> NächsterSpielzug;
