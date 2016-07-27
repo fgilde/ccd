@@ -1,0 +1,2 @@
+C:\Users\tobiasck\AppData\Local\Temporary Projects\nBackApp\bin\Debug\nBackApp.exe.config
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.exe.config
