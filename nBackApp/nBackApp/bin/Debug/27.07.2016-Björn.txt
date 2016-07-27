@@ -1,0 +1,5 @@
+Proband Björn
+Reizdauer 2000
+N = 3 Start = Mittwoch, 27. Juli 2016
+Reize = ABCATDAXYA
+Antworten = NN

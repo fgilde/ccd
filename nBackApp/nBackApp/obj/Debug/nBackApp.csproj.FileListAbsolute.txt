@@ -1,2 +1,10 @@
 C:\Users\tobiasck\AppData\Local\Temporary Projects\nBackApp\bin\Debug\nBackApp.exe.config
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.exe.config
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.exe
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.pdb
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csprojResolveAssemblyReference.cache
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.SpielForm.resources
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.Properties.Resources.resources
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csproj.GenerateResource.Cache
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.exe
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.pdb

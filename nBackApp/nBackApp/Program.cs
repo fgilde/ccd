@@ -16,7 +16,23 @@ namespace nBackApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var nBack = new nBack();
+            var spielForm = new SpielForm();
+            spielForm.Abgebrochen = nBack.Abbrechen;
+            spielForm.Erkannt = nBack.Erkennen;
+            spielForm.Übersprungen = nBack.Überspringen;
+
+            nBack.NächsterSpielzug = spielForm.NeuerSpielzug;
+            nBack.Ende = abbruch =>
+            {
+                if(!abbruch)
+                    spielForm.Close();
+            };
+
+            nBack.Spielen(new Profil());
+
+            Application.Run(spielForm);
         }
     }
 }
