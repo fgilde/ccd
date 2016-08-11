@@ -59,10 +59,8 @@
             // progressBarReizDauer
             // 
             this.progressBarReizDauer.Location = new System.Drawing.Point(146, 34);
-            this.progressBarReizDauer.MarqueeAnimationSpeed = 0;
             this.progressBarReizDauer.Name = "progressBarReizDauer";
             this.progressBarReizDauer.Size = new System.Drawing.Size(100, 20);
-            this.progressBarReizDauer.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBarReizDauer.TabIndex = 2;
             // 
             // buttonErkannt
@@ -101,6 +99,7 @@
             // 
             // timerCountdown
             // 
+            this.timerCountdown.Interval = 200;
             this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
             // 
             // SpielForm

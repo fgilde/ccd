@@ -4,10 +4,10 @@ namespace nBackApp
 {
     public class Profil
     {
-        public string Name => "Björn";
-        public int N => 3;
-        public int Dauer => 2000;
-        public int Anzahl => 10;
+        public string Name { get; set; }
+        public int N { get; set; }
+        public int Dauer { get; set; }
+        public int Anzahl { get; set; }
 
     }
 }

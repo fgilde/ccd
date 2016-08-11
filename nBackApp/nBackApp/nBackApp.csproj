@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ProfilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ProfilForm.Designer.cs">
+      <DependentUpon>ProfilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpielForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpielForm.Designer.cs">
+      <DependentUpon>SpielForm.cs</DependentUpon>
     </Compile>
     <Compile Include="nBack.cs" />
     <Compile Include="Profil.cs" />
@@ -61,8 +67,11 @@
     <Compile Include="Reizspeicher.cs" />
     <Compile Include="SpielStand.cs" />
     <Compile Include="Spielzug.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ProfilForm.resx">
+      <DependentUpon>ProfilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpielForm.resx">
+      <DependentUpon>SpielForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

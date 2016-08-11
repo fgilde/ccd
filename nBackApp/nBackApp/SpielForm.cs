@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace nBackApp
@@ -53,6 +47,7 @@ namespace nBackApp
         /// <param name="e">The <see cref="T:System.EventArgs"/> that contains the event data. </param>
         protected override void OnClosed(EventArgs e)
         {
+            timerCountdown.Stop();
             Abgebrochen();
             base.OnClosed(e);
         }
@@ -67,5 +62,24 @@ namespace nBackApp
             timerTimeout.Stop();
             Übersprungen();
         }
+
+        #region Some Progressbar Hacks damit Sie auch ans Ende läuft ;)
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Form.Load"/> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data. </param>
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            SendMessage(progressBarReizDauer.Handle,
+               0x400 + 16, //WM_USER + PBM_SETSTATE
+               0x0003, //PBST_PAUSED
+               0);
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        static extern uint SendMessage(IntPtr hWnd, uint Msg, uint wParam, uint lParam);
+
+        #endregion
     }
 }

@@ -8,3 +8,4 @@ C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.Properties.Resources.
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csproj.GenerateResource.Cache
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.exe
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.pdb
+C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.ProfilForm.resources

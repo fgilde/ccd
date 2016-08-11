@@ -30,9 +30,14 @@ namespace nBackApp
                     spielForm.Close();
             };
 
-            nBack.Spielen(new Profil());
-
-            Application.Run(spielForm);
+            var profilForm = new ProfilForm();
+            profilForm.Spielen = p =>
+            {
+                nBack.Spielen(p);
+                spielForm.ShowDialog(profilForm);
+            };
+            
+            Application.Run(profilForm);
         }
     }
 }
