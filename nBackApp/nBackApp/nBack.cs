@@ -6,7 +6,7 @@ namespace nBackApp
     // TODO: Profil-Dialog impl.
     // TODO: Bei Ende eine Auswertung -> MessageBox (x-Fehler und dahinter Fehler Prozent) nichterkannte Wiederholung und falsch erkannte Wiederhohlung
     // TODO: Ein Folge generieren
-
+    // TODO: Timer für timeout auslagern (BO) 
     public class nBack
     {
         public Action<Spielzug> NächsterSpielzug;
