@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -42,12 +43,21 @@ namespace nBackApp
         }
 
         /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Form.Closing"/> event.
+        /// </summary>
+        /// <param name="e">A <see cref="T:System.ComponentModel.CancelEventArgs"/> that contains the event data. </param>
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            timerCountdown.Stop();
+            base.OnClosing(e);
+        }
+
+        /// <summary>
         /// Raises the <see cref="E:System.Windows.Forms.Form.Closed"/> event.
         /// </summary>
         /// <param name="e">The <see cref="T:System.EventArgs"/> that contains the event data. </param>
         protected override void OnClosed(EventArgs e)
         {
-            timerCountdown.Stop();
             Abgebrochen();
             base.OnClosed(e);
         }

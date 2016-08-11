@@ -3,14 +3,12 @@
 namespace nBackApp
 {
     // Homework
-    // TODO: Profil-Dialog impl.
-    // TODO: Bei Ende eine Auswertung -> MessageBox (x-Fehler und dahinter Fehler Prozent) nichterkannte Wiederholung und falsch erkannte Wiederhohlung
     // TODO: Ein Folge generieren
     // TODO: Timer für timeout auslagern (BO) 
     public class nBack
     {
         public Action<Spielzug> NächsterSpielzug;
-        public Action<bool> Ende;
+        public Action<bool, Auswertung> Ende;
         private SpielStand spielStand;
         private Reizspeicher reizspeicher;
 
@@ -60,7 +58,8 @@ namespace nBackApp
         private void SpielBeenden(bool abbruch = false)
         {
             new Protokollant().Schreiben(spielStand, reizspeicher);
-            Ende(abbruch);
+            var auswertung = new Auswertung(spielStand, reizspeicher);
+            Ende(abbruch, auswertung);
         }
     }
 }

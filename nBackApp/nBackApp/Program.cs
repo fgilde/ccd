@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace nBackApp
@@ -24,10 +21,13 @@ namespace nBackApp
             spielForm.Übersprungen = nBack.Überspringen;
 
             nBack.NächsterSpielzug = spielForm.NeuerSpielzug;
-            nBack.Ende = abbruch =>
+            nBack.Ende = (abbruch, auswertung) =>
             {
-                if(!abbruch)
+                if (!abbruch)
+                {
                     spielForm.Close();
+                    MessageBox.Show($"Auswertung: Fehler:{auswertung.Fehler} Korrekt: {auswertung.Prozent} %");
+                }
             };
 
             var profilForm = new ProfilForm();

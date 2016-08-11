@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auswertung.cs" />
     <Compile Include="ProfilForm.cs">
       <SubType>Form</SubType>
     </Compile>
