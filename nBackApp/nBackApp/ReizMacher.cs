@@ -8,7 +8,9 @@ namespace nBackApp
         private const double maxNBacksPercent = 0.8d;
         private const int minNBacks = 1;
 
-        private static readonly Random random = new Random();
+        private static readonly Random random = new Random(); 
+        // TODO: Hier ist aus Testgründe zu überlegen, ob das gekapselt werden sollte
+        // Sparen wir uns hier, aber gedanken haben wir uns gemacht @ Ralf
 
         public static char[] ReizeBerechnen(int anzahlReize, int n)
         {
