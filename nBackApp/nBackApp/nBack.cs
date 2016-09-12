@@ -2,9 +2,6 @@
 
 namespace nBackApp
 {
-    // Homework
-    // TODO: Ein Folge generieren
-    // TODO: Timer für timeout auslagern (BO) 
     public class nBack
     {
         public Action<Spielzug> NächsterSpielzug;

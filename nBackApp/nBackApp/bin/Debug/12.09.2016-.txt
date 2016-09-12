@@ -1,0 +1,5 @@
+Proband 
+Reizdauer 1000
+N = 3 Start = Montag, 12. September 2016
+Reize = ABCATDAXYA
+Antworten = NNNNNNNNJN
