@@ -5,9 +5,10 @@ namespace nBackApp
 {
     public class ReizMacher
     {
-        private static Random random = new Random();
+        private const double maxNBacksPercent = 0.8d;
+        private const int minNBacks = 1;
 
-        //private static readonly char[] reize = {'A','B','C','A','T', 'D', 'A', 'X', 'Y', 'A' };
+        private static readonly Random random = new Random();
 
         public static char[] ReizeBerechnen(int anzahlReize, int n)
         {
@@ -46,8 +47,8 @@ namespace nBackApp
 
         private static int AnzahlNBacksFestlegen(int anzahlReize, int n)
         {
-            int maximalAnzahlNBacks = (int)((anzahlReize - n) * 0.8);
-            int anzahlNBacks = random.Next(1, maximalAnzahlNBacks);
+            int maximalAnzahlNBacks = (int)((anzahlReize - n) * maxNBacksPercent);
+            int anzahlNBacks = random.Next(minNBacks, maximalAnzahlNBacks);
             return anzahlNBacks;
         }
 
