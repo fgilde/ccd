@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace WorteZählen
 {
@@ -13,5 +14,12 @@ namespace WorteZählen
         {
             return File.ReadAllText(pfad);
         }
+
+        public HashSet<string> LeseDictionary(string pfad)
+        {
+            if (string.IsNullOrEmpty(pfad))
+                return new HashSet<string>();
+            return new HashSet<string>(File.ReadAllLines(pfad));
+        } 
     }
 }

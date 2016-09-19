@@ -15,10 +15,17 @@ namespace WorteZählen
 
         public void Run()
         {
+            // -- Vorbereitung
             string text = Text_holen();
             string[] stopwörter = dateiZugriff.Stopwörter_laden();
+            var dict = dateiZugriff.LeseDictionary(cli.Dict_Pfad);
+
+            // -- Ergebnis ermitteln
             var ergebnis = WortZähler.Zähle_Wörter(text, stopwörter);
-            dialog.Zeige_Ergebnis(ergebnis, cli.Index_gewünscht);
+            var unbekannte_worte = Lektor.Ermittle_unbekannte_Worte(ergebnis.Eindeutige_Wörter, dict);
+
+            // -- Ausgabe
+            dialog.Zeige_Ergebnis(ergebnis, unbekannte_worte, cli.Index_gewünscht, cli.Prüfbericht_gewünscht);
         }
 
         private string Text_holen()

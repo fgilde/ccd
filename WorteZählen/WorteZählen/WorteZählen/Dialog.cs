@@ -11,7 +11,7 @@ namespace WorteZählen
             return Console.ReadLine();
         }
 
-        public void Zeige_Ergebnis(Ergebnis ergebnis, bool index_gewünscht)
+        public void Zeige_Ergebnis(Ergebnis ergebnis, string[] unbekannte_Worte, bool index_gewünscht, bool prüfbericht_gewünscht)
         {
             Console.WriteLine($"Number of words: {ergebnis.Anzahl_Wörter}, " +
                               $"unique: {ergebnis.Anzahl_eindeutiger_Wörter}; " +
@@ -20,8 +20,20 @@ namespace WorteZählen
             
             if (index_gewünscht)
             {
-                Console.WriteLine("Index:");
-                Console.WriteLine(string.Join(Environment.NewLine, ergebnis.Eindeutige_Wörter.OrderBy(w => w)));
+                if (prüfbericht_gewünscht)
+                    Console.WriteLine($"Index (unbekannt: {unbekannte_Worte.Length}):");
+                else
+                    Console.WriteLine("Index:");
+
+                var index = ergebnis.Eindeutige_Wörter.OrderBy(w => w);
+
+                foreach (var wort in index)
+                {
+                    Console.Write(wort);
+                    if (prüfbericht_gewünscht && unbekannte_Worte.Contains(wort))
+                        Console.Write("*");
+                    Console.WriteLine();
+                }
             }
         }
     }
