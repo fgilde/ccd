@@ -5,10 +5,19 @@ namespace WorteZählen
 {
     internal class Cli
     {
-        public void Pfad_lesen(string[] args, Action<string> pfad_gefunden, Action kein_Pfad_gefunden)
+        private readonly string[] args;
+        public bool Index_gewünscht => args.Any(a => a.Equals("-index", StringComparison.CurrentCultureIgnoreCase));
+
+        public Cli(string[] args)
         {
-            if (args.Any())
-                pfad_gefunden(args.First());
+            this.args = args;
+        }
+
+        public void Pfad_lesen(Action<string> pfad_gefunden, Action kein_Pfad_gefunden)
+        {
+            var pfad = args.FirstOrDefault(a => !a.StartsWith("-"));
+            if (pfad != null)
+                pfad_gefunden(pfad);
             else
                 kein_Pfad_gefunden();
         }

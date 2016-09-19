@@ -14,11 +14,11 @@ namespace WorteZählen
 
         private static Ergebnis Worte_zählen(string[] wörter)
         {
-            var eindeutige_Wörter = wörter.Distinct();
+            var eindeutige_Wörter = wörter.Distinct().ToArray();
             return new Ergebnis
             {
                 Anzahl_Wörter = wörter.Length,
-                Anzahl_eindeutiger_Wörter = eindeutige_Wörter.Count(),
+                Eindeutige_Wörter = eindeutige_Wörter,
                 Durchschnittliche_Wortlänge = eindeutige_Wörter.SelectMany(w => w.ToCharArray()).Count() / (double)eindeutige_Wörter.Count()
             };
         }

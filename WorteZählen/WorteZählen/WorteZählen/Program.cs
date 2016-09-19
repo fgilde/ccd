@@ -11,8 +11,8 @@ namespace WorteZählen
     {
         static void Main(string[] args)
         {
-            var app = new App();
-            app.Run(args);
+            var app = new App(args);
+            app.Run();
         }
     }
 }
