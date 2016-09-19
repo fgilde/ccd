@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1A9B18CB-43F9-4CD7-A436-AB2B1C9F7405}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{419B9C32-01A6-4083-90B7-7928F586DB76}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nBackApp</RootNamespace>
-    <AssemblyName>nBackApp</AssemblyName>
+    <RootNamespace>WorteZählen</RootNamespace>
+    <AssemblyName>WorteZählen</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,62 +39,23 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auswertung.cs" />
-    <Compile Include="Adapter\Dialoge\ProfilForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adapter\Dialoge\ProfilForm.Designer.cs">
-      <DependentUpon>ProfilForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Adapter\Dialoge\SpielForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adapter\Dialoge\SpielForm.Designer.cs">
-      <DependentUpon>SpielForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="nBack.cs" />
-    <Compile Include="Daten\Nachrichten\Profil.cs" />
+    <Compile Include="DateiZugriff.cs" />
+    <Compile Include="Dialog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Adapter\Protokollant.cs" />
-    <Compile Include="ReizMacher.cs" />
-    <Compile Include="Daten\Zustände\Reizspeicher.cs" />
-    <Compile Include="Daten\Zustände\SpielStand.cs" />
-    <Compile Include="Daten\Nachrichten\Spielzug.cs" />
-    <EmbeddedResource Include="Adapter\Dialoge\ProfilForm.resx">
-      <DependentUpon>ProfilForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Adapter\Dialoge\SpielForm.resx">
-      <DependentUpon>SpielForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <Compile Include="WortZähler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StopWords.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
