@@ -31,7 +31,7 @@ namespace WorteZählen
 
         private static string[] Aufteilen_nach_Trennzeichen(string text)
         {
-            var trennzeichen = " \r\t\n!,.:;\\(){}[]/$€%<>|=*+#&@-_?\"'".ToCharArray();
+            var trennzeichen = " \r\t\n!,.:;\\(){}[]/$€%<>|=*+#&@_?\"'".ToCharArray();
             return text.Split(trennzeichen, StringSplitOptions.RemoveEmptyEntries);
         }
 

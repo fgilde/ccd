@@ -8,3 +8,4 @@ D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest.dll
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest.pdb
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\StopWords.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\mytext.txt
