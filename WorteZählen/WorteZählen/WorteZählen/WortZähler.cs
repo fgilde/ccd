@@ -5,16 +5,20 @@ namespace WorteZählen
 {
     public class WortZähler
     {
-        public static int Zähle_Wörter(string text, string[] stopwörter)
+        public static Ergebnis Zähle_Wörter(string text, string[] stopwörter)
         {
             var wortKandidaten = Aufteilen_nach_Trennzeichen(text);
             var wörter = Filter_Kandidaten(wortKandidaten, stopwörter);
             return Worte_zählen(wörter);
         }
 
-        private static int Worte_zählen(string[] wörter)
+        private static Ergebnis Worte_zählen(string[] wörter)
         {
-            return wörter.Length;
+            return new Ergebnis
+            {
+                Anzahl_Wörter = wörter.Length,
+                Anzahl_eindeutiger_Wörter = wörter.Distinct().Count()
+            };
         }
 
         private static string[] Filter_Kandidaten(string[] wortKandidaten, string[] stopwörter)

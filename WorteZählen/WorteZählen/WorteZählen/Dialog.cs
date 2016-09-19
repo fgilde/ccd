@@ -10,9 +10,9 @@ namespace WorteZählen
             return Console.ReadLine();
         }
 
-        public void Zeige_Anzahl_Wörter(int i)
+        public void Zeige_Anzahl_Wörter(Ergebnis ergebnis)
         {
-            Console.WriteLine($"Number of words: {i}");
+            Console.WriteLine($"Number of words: {ergebnis.Anzahl_Wörter}, unique: {ergebnis.Anzahl_eindeutiger_Wörter}");
         }
     }
 }

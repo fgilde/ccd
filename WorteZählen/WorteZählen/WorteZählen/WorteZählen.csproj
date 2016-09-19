@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
     <Compile Include="Cli.cs" />
     <Compile Include="DateiZugriff.cs" />
     <Compile Include="Dialog.cs" />
+    <Compile Include="Ergebnis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WortZähler.cs" />
