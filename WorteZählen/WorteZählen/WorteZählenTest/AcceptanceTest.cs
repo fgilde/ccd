@@ -35,5 +35,16 @@ namespace WorteZählenTest
             Assert.AreEqual(6, ergebnis.Anzahl_eindeutiger_Wörter);
 
         }
+
+        [TestMethod]
+        public void Test_mit_Durchschnitt()
+        {
+            string[] stopwörter = {};
+            string text = "Ralf mag mag Malte";
+
+            var ergebnis = WortZähler.Zähle_Wörter(text, stopwörter);
+            Assert.AreEqual(4d, ergebnis.Durchschnittliche_Wortlänge);
+
+        }
     }
 }

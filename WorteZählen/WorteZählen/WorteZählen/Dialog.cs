@@ -12,7 +12,9 @@ namespace WorteZählen
 
         public void Zeige_Anzahl_Wörter(Ergebnis ergebnis)
         {
-            Console.WriteLine($"Number of words: {ergebnis.Anzahl_Wörter}, unique: {ergebnis.Anzahl_eindeutiger_Wörter}");
+            Console.WriteLine($"Number of words: {ergebnis.Anzahl_Wörter}, " +
+                              $"unique: {ergebnis.Anzahl_eindeutiger_Wörter}; " +
+                              $"average word length: {ergebnis.Durchschnittliche_Wortlänge:N1} characters");
         }
     }
 }
