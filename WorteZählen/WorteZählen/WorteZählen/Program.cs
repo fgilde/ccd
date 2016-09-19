@@ -14,10 +14,13 @@ namespace WorteZählen
 
         public static void Run()
         {
-            string text = Dialog.Fordere_Eingabe();
-            string[] stopwörter = DateiZugriff.Stopwörter_laden();
+            var dialog = new Dialog();
+            var dateiZugriff = new DateiZugriff();
+
+            string text = dialog.Fordere_Eingabe();
+            string[] stopwörter = dateiZugriff.Stopwörter_laden();
             int n = WortZähler.Zähle_Wörter(text, stopwörter);
-            Dialog.Zeige_Anzahl_Wörter(n);
+            dialog.Zeige_Anzahl_Wörter(n);
         }
     }
 }
