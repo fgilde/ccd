@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cli.cs" />
     <Compile Include="DateiZugriff.cs" />
     <Compile Include="Dialog.cs" />
     <Compile Include="Program.cs" />
@@ -54,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="StopWords.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mytext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

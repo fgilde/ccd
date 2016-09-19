@@ -8,5 +8,10 @@ namespace WorteZählen
         {
             return File.ReadAllLines("StopWords.txt");
         }
+
+        public string Textdatei_lesen(string pfad)
+        {
+            return File.ReadAllText(pfad);
+        }
     }
 }

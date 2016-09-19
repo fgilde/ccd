@@ -5,3 +5,4 @@ D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.csprojR
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.exe
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.pdb
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\StopWords.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\mytext.txt
