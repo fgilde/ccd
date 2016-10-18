@@ -24,3 +24,7 @@
 /TicTacToe/TicTacToeForms/obj/Debug
 /Taschenrechner/.vs/Taschenrechner/v14
 /Taschenrechner/Taschenrechner/obj/Debug
+/Questionnaire/Questionnaire/bin/Debug
+/Questionnaire/Questionnaire/obj/Debug
+*.user
+*.suo
