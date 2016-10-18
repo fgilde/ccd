@@ -1,0 +1,13 @@
+﻿?Which of these animals is a mammal
+Ant
+Bee
+*Cat
+?Spieglein, spieglein wer ist der schönste im ganzen Land
+Harry
+Tommy
+Andy
+*BOP
+?What is the sum of 2+3
+2
+*5
+6
