@@ -1,0 +1,11 @@
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\WorteZählenTest.dll
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\WorteZählenTest.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\WorteZählen.exe
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\WorteZählen.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest.csprojResolveAssemblyReference.cache
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest.dll
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\obj\Debug\WorteZählenTest.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\StopWords.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählenTest\bin\Debug\mytext.txt

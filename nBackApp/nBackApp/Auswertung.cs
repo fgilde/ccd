@@ -11,11 +11,16 @@ namespace nBackApp
          
         public Auswertung(SpielStand spielStand, Reizspeicher reizspeicher)
         {
-            Fehler = FehlerAnzahlErmitteln(spielStand, reizspeicher);
-            Prozent = (reizspeicher.Anzahl - Fehler) * 100.0 / reizspeicher.Anzahl;
+            Fehler = Fehleranzahl_ermitteln(spielStand, reizspeicher);
+            Prozent = Erfolgsquote_berechnen(reizspeicher);
         }
 
-        private int FehlerAnzahlErmitteln(SpielStand spielStand, Reizspeicher reizspeicher)
+        private double Erfolgsquote_berechnen(Reizspeicher reizspeicher)
+        {
+            return (reizspeicher.Anzahl - Fehler) * 100.0 / reizspeicher.Anzahl;
+        }
+
+        private int Fehleranzahl_ermitteln(SpielStand spielStand, Reizspeicher reizspeicher)
         {
             char[] richtigenAntworten = KorrekteAntwortenErmitteln(spielStand.Profil.N, reizspeicher);
             int fehlerAnzahl = UnterschiedeZählen(richtigenAntworten, spielStand.AlleAntworten());

@@ -9,3 +9,13 @@ C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csproj.GenerateResour
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.exe
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.pdb
 C:\dev\spielwiese\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.ProfilForm.resources
+D:\dev\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.exe.config
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.exe
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.pdb
+D:\dev\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.exe
+D:\dev\ccd\nBackApp\nBackApp\bin\Debug\nBackApp.pdb
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csprojResolveAssemblyReference.cache
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.ProfilForm.resources
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.SpielForm.resources
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.Properties.Resources.resources
+D:\dev\ccd\nBackApp\nBackApp\obj\Debug\nBackApp.csproj.GenerateResource.Cache

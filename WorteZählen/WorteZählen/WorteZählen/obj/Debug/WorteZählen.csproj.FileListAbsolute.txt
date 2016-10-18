@@ -1,0 +1,12 @@
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\WorteZählen.exe.config
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\WorteZählen.exe
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\WorteZählen.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.csprojResolveAssemblyReference.cache
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.exe
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\StopWords.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\mytext.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\dict.txt
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.dll
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.pdb
+D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.xml

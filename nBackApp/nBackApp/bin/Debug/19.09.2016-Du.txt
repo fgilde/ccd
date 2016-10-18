@@ -1,0 +1,5 @@
+Proband Du
+Reizdauer 5000
+N = 3 Start = Montag, 19. September 2016
+Reize = GFKCFSCDPB
+Antworten = NNNNJNJNNN
