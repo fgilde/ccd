@@ -46,27 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\QuestionControl.cs">
+    <Compile Include="Daten\Antwort.cs" />
+    <Compile Include="Adapter\DateiSystem.cs" />
+    <Compile Include="Adapter\Dialoge\QuestionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\QuestionControl.Designer.cs">
+    <Compile Include="Adapter\Dialoge\QuestionControl.Designer.cs">
       <DependentUpon>QuestionControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\QuestionnaireForm.cs">
+    <Compile Include="Adapter\Dialoge\QuestionnaireForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\QuestionnaireForm.Designer.cs">
+    <Compile Include="Adapter\Dialoge\QuestionnaireForm.Designer.cs">
       <DependentUpon>QuestionnaireForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Daten\Frage.cs" />
+    <Compile Include="Fragebogen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form\ScoreForm.cs">
+    <Compile Include="Adapter\Dialoge\ScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ScoreForm.Designer.cs">
+    <Compile Include="Adapter\Dialoge\ScoreForm.Designer.cs">
       <DependentUpon>ScoreForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\QuestionControl.resx">
+    <EmbeddedResource Include="Adapter\Dialoge\QuestionControl.resx">
       <DependentUpon>QuestionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,10 +82,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\QuestionnaireForm.resx">
+    <EmbeddedResource Include="Adapter\Dialoge\QuestionnaireForm.resx">
       <DependentUpon>QuestionnaireForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ScoreForm.resx">
+    <EmbeddedResource Include="Adapter\Dialoge\ScoreForm.resx">
       <DependentUpon>ScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -98,7 +102,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="questionnaire.txt" />
+    <Content Include="questionnaire.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

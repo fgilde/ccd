@@ -1,0 +1,10 @@
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\questionnaire.txt
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Tests.dll
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Tests.pdb
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Questionnaire.exe
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Questionnaire.pdb
+C:\dev\spielwiese\ccd\Questionnaire\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\dev\spielwiese\ccd\Questionnaire\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\dev\spielwiese\ccd\Questionnaire\Tests\obj\Debug\Tests.dll
+C:\dev\spielwiese\ccd\Questionnaire\Tests\obj\Debug\Tests.pdb

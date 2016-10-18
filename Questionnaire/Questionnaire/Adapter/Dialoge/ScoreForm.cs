@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Questionnaire.Form
+namespace Questionnaire.Adapter.Dialoge
 {
     public partial class ScoreForm : System.Windows.Forms.Form
     {

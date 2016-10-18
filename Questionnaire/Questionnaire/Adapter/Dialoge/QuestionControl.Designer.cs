@@ -1,4 +1,6 @@
-﻿namespace Questionnaire.Form
+﻿using System;
+
+namespace Questionnaire.Adapter.Dialoge
 {
     partial class QuestionControl
     {
@@ -52,7 +54,7 @@
             this.panelScroll.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panelScroll.Location = new System.Drawing.Point(3, 21);
             this.panelScroll.Name = "panelScroll";
-            this.panelScroll.Size = new System.Drawing.Size(315, 25);
+            this.panelScroll.Size = new System.Drawing.Size(315, 128);
             this.panelScroll.TabIndex = 1;
             this.panelScroll.WrapContents = false;
             // 
@@ -64,7 +66,7 @@
             this.Controls.Add(this.panelScroll);
             this.Controls.Add(this.labelQuestion);
             this.Name = "QuestionControl";
-            this.Size = new System.Drawing.Size(321, 47);
+            this.Size = new System.Drawing.Size(321, 150);
             this.ResumeLayout(false);
             this.PerformLayout();
 

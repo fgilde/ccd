@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Questionnaire.Form
+namespace Questionnaire.Adapter.Dialoge
 {
     partial class QuestionnaireForm
     {

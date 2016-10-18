@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
 
-namespace Questionnaire.Form
+namespace Questionnaire.Adapter.Dialoge
 {
     public partial class QuestionnaireForm : System.Windows.Forms.Form
     {

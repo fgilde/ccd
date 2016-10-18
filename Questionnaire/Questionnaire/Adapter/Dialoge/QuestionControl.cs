@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Questionnaire.Form
+namespace Questionnaire.Adapter.Dialoge
 {
     public partial class QuestionControl : UserControl
     {
