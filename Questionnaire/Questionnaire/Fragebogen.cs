@@ -30,7 +30,7 @@ namespace Questionnaire
                 {
                     Text = z.TrimStart('*'),
                     Richtig = z.StartsWith("*")
-                }).ToArray()
+                }).Concat(new[] {new Antwort {Ausgewählt = true, Text = "Don't know"} }).ToArray()
             };
         }
 

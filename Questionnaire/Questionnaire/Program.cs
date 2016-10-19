@@ -17,7 +17,15 @@ namespace Questionnaire
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuestionnaireForm());
+
+            var fragebogen = new Fragebogen();
+            var fragen = fragebogen.Lese_Fragebogen();
+
+
+            var questionnaireForm = new QuestionnaireForm(fragen);
+
+
+            Application.Run(questionnaireForm);
         }
     }
 }

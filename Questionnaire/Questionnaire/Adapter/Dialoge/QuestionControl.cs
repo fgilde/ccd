@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
+using Questionnaire.Daten;
 
 namespace Questionnaire.Adapter.Dialoge
 {
     public partial class QuestionControl : UserControl
     {
-        public QuestionControl(string question, string[] answers)
+        public QuestionControl(Frage frage)
         {
             InitializeComponent();
 
-            labelQuestion.Text = question;
-            foreach (string answer in answers)
-            {
-                panelScroll.Controls.Add(new RadioButton {Text = answer });
-            }
+            labelQuestion.Text = frage.Text;
+            foreach (Antwort antwort in frage.Antworten)
+                panelScroll.Controls.Add(new RadioButton {Text = antwort.Text, Checked = antwort.Ausgewählt});
         }
     }
 }
