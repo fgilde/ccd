@@ -27,7 +27,7 @@ namespace Questionnaire
 
         private static void Auswertung_anzeigen(Fragebogen fragebogen, Frage[] fragen)
         {
-            Auswertung auswertung = new Auswertung(fragen); //fragebogen.Auswerten(fragen);
+            Auswertung auswertung = new Auswertung(fragen); //fragebogen.Auswerten(Fragen);
             new ScoreForm(auswertung).ShowDialog();
         }
     }

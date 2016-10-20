@@ -31,15 +31,16 @@ namespace Questionnaire.Adapter.Dialoge
         private void InitializeComponent()
         {
             this.labelScore = new System.Windows.Forms.Label();
-            this.panelScroll = new System.Windows.Forms.Panel();
+            this.panelScroll = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // labelScore
             // 
             this.labelScore.AutoSize = true;
+            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore.Location = new System.Drawing.Point(12, 9);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(351, 13);
+            this.labelScore.Size = new System.Drawing.Size(424, 13);
             this.labelScore.TabIndex = 0;
             this.labelScore.Text = "{correct} out of {count} questions answered correctly ({correctPercent}%)";
             // 
@@ -48,19 +49,21 @@ namespace Questionnaire.Adapter.Dialoge
             this.panelScroll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelScroll.Location = new System.Drawing.Point(12, 25);
+            this.panelScroll.AutoScroll = true;
+            this.panelScroll.Location = new System.Drawing.Point(12, 37);
+            this.panelScroll.MinimumSize = new System.Drawing.Size(100, 20);
             this.panelScroll.Name = "panelScroll";
-            this.panelScroll.Size = new System.Drawing.Size(345, 310);
+            this.panelScroll.Size = new System.Drawing.Size(410, 163);
             this.panelScroll.TabIndex = 1;
             // 
             // ScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 347);
+            this.ClientSize = new System.Drawing.Size(434, 212);
             this.Controls.Add(this.panelScroll);
             this.Controls.Add(this.labelScore);
-            this.MinimumSize = new System.Drawing.Size(385, 385);
+            this.MinimumSize = new System.Drawing.Size(450, 250);
             this.Name = "ScoreForm";
             this.Text = "Your score";
             this.ResumeLayout(false);
@@ -71,6 +74,6 @@ namespace Questionnaire.Adapter.Dialoge
         #endregion
 
         private System.Windows.Forms.Label labelScore;
-        private System.Windows.Forms.Panel panelScroll;
+        private System.Windows.Forms.FlowLayoutPanel panelScroll;
     }
 }

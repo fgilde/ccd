@@ -36,12 +36,14 @@ namespace Questionnaire.Adapter.Dialoge
             // 
             // labelQuestion
             // 
+            this.labelQuestion.AutoSize = true;
             this.labelQuestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelQuestion.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelQuestion.Location = new System.Drawing.Point(0, 0);
             this.labelQuestion.MinimumSize = new System.Drawing.Size(100, 12);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.labelQuestion.Size = new System.Drawing.Size(308, 18);
+            this.labelQuestion.Size = new System.Drawing.Size(100, 18);
             this.labelQuestion.TabIndex = 0;
             this.labelQuestion.Text = "Question?";
             // 
@@ -62,14 +64,14 @@ namespace Questionnaire.Adapter.Dialoge
             // 
             // QuestionControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.panelScroll);
             this.Controls.Add(this.labelQuestion);
-            this.MinimumSize = new System.Drawing.Size(100, 20);
+            this.MinimumSize = new System.Drawing.Size(310, 0);
             this.Name = "QuestionControl";
-            this.Size = new System.Drawing.Size(308, 37);
+            this.Size = new System.Drawing.Size(310, 34);
             this.ResumeLayout(false);
             this.PerformLayout();
 

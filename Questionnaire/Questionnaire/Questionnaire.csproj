@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\Dialoge\ScoreControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Adapter\Dialoge\ScoreControl.Designer.cs">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="App.cs" />
     <Compile Include="Daten\Auswertung.cs" />
     <Compile Include="Daten\Antwort.cs" />
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Adapter\Dialoge\QuestionControl.resx">
       <DependentUpon>QuestionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adapter\Dialoge\ScoreControl.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
