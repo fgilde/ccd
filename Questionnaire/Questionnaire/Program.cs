@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Questionnaire.Adapter.Dialoge;
+using Questionnaire.Daten;
 
 namespace Questionnaire
 {
@@ -18,14 +16,8 @@ namespace Questionnaire
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var fragebogen = new Fragebogen();
-            var fragen = fragebogen.Lese_Fragebogen();
-
-
-            var questionnaireForm = new QuestionnaireForm(fragen);
-
-
-            Application.Run(questionnaireForm);
+            var app = new App();
+            app.Run();
         }
     }
 }

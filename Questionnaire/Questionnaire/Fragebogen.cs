@@ -25,7 +25,7 @@ namespace Questionnaire
         {
             return new Frage
             {
-                Text = block_zeilen[0].TrimStart('?'),
+                Text = block_zeilen[0].TrimStart('?') + "?",
                 Antworten = block_zeilen.Skip(1).Select(z => new Antwort
                 {
                     Text = z.TrimStart('*'),

@@ -10,3 +10,6 @@ D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\dict.txt
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.dll
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.pdb
 D:\dev\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\CLAP.xml
+C:\dev\spielwiese\ccd\WorteZählen\WorteZählen\WorteZählen\bin\Debug\WorteZählen.exe.config
+C:\dev\spielwiese\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.exe
+C:\dev\spielwiese\ccd\WorteZählen\WorteZählen\WorteZählen\obj\Debug\WorteZählen.pdb

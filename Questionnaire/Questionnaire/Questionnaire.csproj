@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Daten\Auswertung.cs" />
     <Compile Include="Daten\Antwort.cs" />
     <Compile Include="Adapter\DateiSystem.cs" />
     <Compile Include="Adapter\Dialoge\QuestionControl.cs">
