@@ -2,11 +2,10 @@
 Ant
 Bee
 *Cat
-?Spieglein, spieglein wer ist der schönste im ganzen Land
+?Spieglein, wer ist der Schönste von Welt
 Harry
 Tommy
-Andy
-*BOP
+*Andy
 ?What is the sum of 2+3
 2
 *5
