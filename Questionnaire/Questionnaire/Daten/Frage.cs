@@ -7,6 +7,6 @@ namespace Questionnaire.Daten
     {
         public string Text { get; set; }
         public Antwort[] Antworten { get; set; }
-        public bool Richitg_Beantwortet => Antworten.Any(a => a.Ausgewählt && a.Richtig);
+        public bool Richtig_Beantwortet => Antworten.Any(a => a.Ausgewählt && a.Richtig);
     }
 }

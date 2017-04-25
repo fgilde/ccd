@@ -14,12 +14,12 @@ namespace Questionnaire.Adapter.Dialoge
         {
             InitializeComponent();
 
-            string correct_or_wrong = frage.Richitg_Beantwortet ? "correct" : "wrong";
+            string correct_or_wrong = frage.Richtig_Beantwortet ? "correct" : "wrong";
 
             labelQuestion.Text = frage.Text;
             labelYourAnswer.Text = $@"Your answer '{frage.Antworten.Single(a => a.Ausgewählt).Text}' is {correct_or_wrong}";
-            labelYourAnswer.ForeColor = frage.Richitg_Beantwortet ? Color.Green : Color.Red;
-            labelCorrectAnswer.Visible = !frage.Richitg_Beantwortet;
+            labelYourAnswer.ForeColor = frage.Richtig_Beantwortet ? Color.Green : Color.Red;
+            labelCorrectAnswer.Visible = !frage.Richtig_Beantwortet;
             labelCorrectAnswer.Text = $@"Correct answer: '{frage.Antworten.Single(a => a.Richtig).Text}'";
 
         }

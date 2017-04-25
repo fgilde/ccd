@@ -14,7 +14,7 @@ namespace Questionnaire
 
             var questionnaireForm = new QuestionnaireForm(fragen,
                 Frage_beantwortet,
-                () => Auswertung_anzeigen(fragebogen, fragen));
+                () => Auswertung_anzeigen(fragen));
 
             Application.Run(questionnaireForm);
         }
@@ -25,9 +25,9 @@ namespace Questionnaire
                 antwort.Ausgewählt = antwort == gewählte_Antwort;
         }
 
-        private static void Auswertung_anzeigen(Fragebogen fragebogen, Frage[] fragen)
+        private static void Auswertung_anzeigen(Frage[] fragen)
         {
-            Auswertung auswertung = new Auswertung(fragen); //fragebogen.Auswerten(Fragen);
+            Auswertung auswertung = new Auswertung(fragen);
             new ScoreForm(auswertung).ShowDialog();
         }
     }

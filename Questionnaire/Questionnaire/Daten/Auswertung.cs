@@ -10,7 +10,7 @@ namespace Questionnaire.Daten
     public class Auswertung 
     {
         public Frage[] Fragen { get; private set; }
-        public int Korrekte_Antworten => Fragen.Count(f => f.Richitg_Beantwortet);
+        public int Korrekte_Antworten => Fragen.Count(f => f.Richtig_Beantwortet);
         public int Fragen_Anzahl => Fragen.Length;
         public double Prozent => (double)Korrekte_Antworten / Fragen_Anzahl;
 
